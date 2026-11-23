@@ -12,7 +12,7 @@ An APB3 SPI master controller taken through a full ASIC design flow: RTL design,
 |------|--------|
 | UVM regression | **10 / 10 tests pass**, 0 scoreboard mismatches, 0 assertion failures |
 | Functional coverage (merged) | **99.80 %** (7 covergroups) |
-| Code coverage (DUT) | statement **100 %**, branch **95–100 %**, condition **93–100 %** |
+| Code coverage (DUT) | statement **100 %**, branch **95–100 %**, condition **93–100 %** in sub-modules ¹ |
 | Toggle coverage (ports + key registers) | **109 / 109 bits (100 %)** |
 | Assertions | 35+ SVA properties + 9 cover properties |
 | Technology | SKY130A, `sky130_fd_sc_hd` |
@@ -120,9 +120,13 @@ uvm_test_top
 | cg_xfer | 100 % | | spi_regs | 100 % | 100 % | 100 % |
 | cg_data | 100 % | | spi_master | 100 % | 95 % | 100 % |
 | cg_div | 100 % | | spi_fifo (x2) | 100 % | 100 % | 92.86 % |
-| cg_apb | 98.61 % | | spi_top | n/a | 100 % | n/a |
+| cg_apb | 98.61 % | | spi_top | n/a | 100 % | 0 % ¹ |
 | cg_isr, cg_status, cg_ctrl | 100 % | | | | | |
 | **Total** | **99.80 %** | | **Toggle** | | | **109/109** |
+
+¹ XCRG reports 0 % condition coverage for the single chip-select decode expression in `spi_top` (`cs_on && !loopback`), although its inputs are exercised in both states by the CS and loopback tests. All other modules are at 92.9–100 %.
+
+Coverage summaries: `reports/verification/functional_coverage_report.txt` and `reports/verification/code_coverage_report.txt`. The full XCRG HTML reports are packed in `reports/verification/coverage_reports_html.zip`.
 
 Run the regression with Vivado 2024.2:
 

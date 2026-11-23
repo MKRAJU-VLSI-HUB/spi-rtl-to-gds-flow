@@ -37,7 +37,7 @@ This project takes an SPI master controller with an AMBA APB3 interface through 
 \midrule
 UVM regression & 10/10 tests pass, 0 mismatches, 0 assertion failures \\
 Functional coverage (merged) & 99.80\,\% \\
-Code coverage (DUT) & statement 100\,\%, branch 95--100\,\%, condition 93--100\,\% \\
+Code coverage (DUT) & statement 100\,\%, branch 95--100\,\%, condition 93--100\,\% (sub-modules) \\
 Toggle coverage & 109/109 port and register bits (100\,\%) \\
 Signoff frequency & 50\,MHz, met in all 9 PVT/RC corners \\
 Setup / hold WNS & +2.57\,ns / +0.11\,ns \\
@@ -120,13 +120,15 @@ spi\_random\_test & constrained-random mix incl. manual CS frames & PASS\\
 cg\_xfer (mode/order/CS) & 100\,\% & spi\_regs & 100\,\% & 100\,\% & 100\,\% \\
 cg\_data (MOSI/MISO) & 100\,\% & spi\_master & 100\,\% & 95\,\% & 100\,\% \\
 cg\_div & 100\,\% & spi\_fifo & 100\,\% & 100\,\% & 92.86\,\% \\
-cg\_apb & 98.61\,\% & spi\_top & -- & 100\,\% & -- \\
+cg\_apb & 98.61\,\% & spi\_top & -- & 100\,\% & 0\,\%$^1$ \\
 cg\_isr, cg\_status, cg\_ctrl & 100\,\% & & & & \\
 \midrule
 \textbf{Merged total} & \textbf{99.80\,\%} & \multicolumn{4}{l}{Toggle: 109/109 bits (100\,\%)} \\
 \bottomrule
 \end{tabular}
 \end{center}
+$^1$XCRG reports 0\,\% condition coverage for the single chip-select decode expression in \texttt{spi\_top}, although its inputs are exercised in both states by the chip-select and loopback tests.
+
 Coverage closure also exposed two testbench weaknesses, which were fixed: random TX data seldom hit the corner values, and the slave's MISO distribution was weighted per value rather than across the whole range.
 
 \sect{RTL-to-GDSII Implementation (SKY130)}

@@ -1,0 +1,9 @@
+Code coverage summary (Vivado 2024.2 XCRG, merged over the full regression)
+
+Module       Instance                            Statement     Branch  Condition
+spi_top      tb_top.dut                                  n/a        100          0
+spi_regs     tb_top.dut.u_regs                         100        100        100
+spi_fifo     tb_top.dut.u_tx_fifo,tb_top.dut.u_rx_fifo        100        100    92.8571
+spi_master   tb_top.dut.u_master                       100         95        100
+
+uart_top/spi_top contain only continuous assignments and instances (no procedural statements).
