@@ -1,0 +1,842 @@
+
+ Xcrg Functional Coverage Report 
+
+ // To generate a more detailed report in html format, please run xcrg -dir <database> -report_format html -report_dir <dir>
+ // This is a text report also in CSV format. By exporting to Excel and using , as the delimiter, the data can be split into individual rows and columns
+ // This report contains 3 sections, Total Summary, CoverGroups Summary and CoverPoint Tables sections 
+ // In order to navigate to a CoverPoint's Table, the TableTag printed for the respective covergroup/instance can be grepped in this report
+ // For example, if covergroup name is g1 and coverpoint is cp1, the TableTag to go to the Group's CoverPoint Table summary is g1_cp1 
+ // For example, if covergroup name is g1, instance name is i1, coverpoint is cp1, the TableTag to go to the Instance's CoverPoint Table summary is g1_i1_cp1 
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Total Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+   Date             :, 11/23/26 00:40:53 India Standard Time
+   User             :, RAJU
+   Version          :, Vivado Simulator Coverage Report 2024.2.0
+   Command Line     :, C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xcrg.exe -cov_db_dir . -cov_db_name spi_smoke_test -cov_db_name spi_reg_test -cov_db_name spi_mode_test -cov_db_name spi_clkdiv_test -cov_db_name spi_cs_test -cov_db_name spi_overflow_test -cov_db_name spi_overrun_test -cov_db_name spi_loopback_test -cov_db_name spi_irq_test -cov_db_name spi_random_test -report_dir ../cov_report/functional -report_format all -log ../logs/xcrg_func.log 
+   Number of Tests  :, 1
+
+   Coverage Score            :, 99.8016
+   Total Insts Score         :, 99.8016
+   Total no of Cover Groups  :, 7
+   Total no of Instances     :, 7
+
+
+     CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+       spi_pkg::spi_coverage::cg_xfer                    ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       spi_pkg::spi_coverage::cg_data                    ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       spi_pkg::spi_coverage::cg_div                     ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       spi_pkg::spi_coverage::cg_apb                     ,98.6111     ,1           ,98.6111         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       spi_pkg::spi_coverage::cg_isr                     ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       spi_pkg::spi_coverage::cg_status                  ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+       spi_pkg::spi_coverage::cg_ctrl                    ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CoverGroups Summary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Cover Group Details : spi_pkg::spi_coverage::cg_xfer
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+spi_pkg::spi_coverage::cg_xfer                    ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - spi_pkg::spi_coverage::cg_xfer
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             obj.cg_xfer                                       ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance obj.cg_xfer Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_mode                                           ,cg_xfer_obj.cg_xfer_cp_mode,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_order                                          ,cg_xfer_obj.cg_xfer_cp_order,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_cs                                             ,cg_xfer_obj.cg_xfer_cp_cs,4           ,0           ,4           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_b2b                                            ,cg_xfer_obj.cg_xfer_cp_b2b,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+      Instance obj.cg_xfer Cross Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    Comment,    
+             x_mode_order                                      ,cg_xfer_obj.cg_xfer_x_mode_order,8           ,0           ,8           ,100         ,100         ,1           ,1           ,            ,
+             x_mode_cs                                         ,cg_xfer_obj.cg_xfer_x_mode_cs,16          ,0           ,16          ,100         ,100         ,1           ,1           ,            ,
+             x_mode_b2b                                        ,cg_xfer_obj.cg_xfer_x_mode_b2b,8           ,0           ,8           ,100         ,100         ,1           ,1           ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : spi_pkg::spi_coverage::cg_data
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+spi_pkg::spi_coverage::cg_data                    ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - spi_pkg::spi_coverage::cg_data
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             obj.cg_data                                       ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance obj.cg_data Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_mosi                                           ,cg_data_obj.cg_data_cp_mosi,5           ,0           ,5           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_miso                                           ,cg_data_obj.cg_data_cp_miso,5           ,0           ,5           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : spi_pkg::spi_coverage::cg_div
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+spi_pkg::spi_coverage::cg_div                     ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - spi_pkg::spi_coverage::cg_div
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             obj.cg_div                                        ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance obj.cg_div Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_div                                            ,cg_div_obj.cg_div_cp_div,6           ,0           ,6           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : spi_pkg::spi_coverage::cg_apb
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+spi_pkg::spi_coverage::cg_apb                     ,98.6111     ,1           ,98.6111         ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - spi_pkg::spi_coverage::cg_apb
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             obj.cg_apb                                        ,98.6111     ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance obj.cg_apb Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_addr                                           ,cg_apb_obj.cg_apb_cp_addr,9           ,0           ,9           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_rw                                             ,cg_apb_obj.cg_apb_cp_rw,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_err                                            ,cg_apb_obj.cg_apb_cp_err,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+      Instance obj.cg_apb Cross Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    Comment,    
+             x_access                                          ,cg_apb_obj.cg_apb_x_access,18          ,1           ,17          ,94.4444     ,100         ,1           ,1           ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : spi_pkg::spi_coverage::cg_isr
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+spi_pkg::spi_coverage::cg_isr                     ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - spi_pkg::spi_coverage::cg_isr
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             obj.cg_isr                                        ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance obj.cg_isr Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_rx_avail                                       ,cg_isr_obj.cg_isr_cp_rx_avail,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_tx_empty                                       ,cg_isr_obj.cg_isr_cp_tx_empty,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_done                                           ,cg_isr_obj.cg_isr_cp_done,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_overrun                                        ,cg_isr_obj.cg_isr_cp_overrun,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_overflow                                       ,cg_isr_obj.cg_isr_cp_overflow,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_ier                                            ,cg_isr_obj.cg_isr_cp_ier,7           ,0           ,7           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : spi_pkg::spi_coverage::cg_status
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+spi_pkg::spi_coverage::cg_status                  ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - spi_pkg::spi_coverage::cg_status
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             obj.cg_status                                     ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance obj.cg_status Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_tx_lvl                                         ,cg_status_obj.cg_status_cp_tx_lvl,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_rx_lvl                                         ,cg_status_obj.cg_status_cp_rx_lvl,3           ,0           ,3           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_busy                                           ,cg_status_obj.cg_status_cp_busy,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+
+
+
+
+
+
+Cover Group Details : spi_pkg::spi_coverage::cg_ctrl
+
+CgName,                                           Score,      NumInsts,   AvgInstScore,   Weight,     Goal,       Merge Insts,    Get Inst Cov,   Per Inst,   AutoBinMax,     Comment,    
+
+spi_pkg::spi_coverage::cg_ctrl                    ,100         ,1           ,100             ,1           ,100         ,0               ,0               ,1           ,64              ,            ,
+
+      Instances of CoverGroup - spi_pkg::spi_coverage::cg_ctrl
+
+             InstName,                                         Score,      Weight,     Goal,       AtLeast,    AutoBinMax, PrintMissing,   IsInst,     Comment,    
+             obj.cg_ctrl                                       ,100         ,1           ,100         ,1           ,64          ,0               ,1           ,            ,
+
+
+      Instance obj.cg_ctrl Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    AutoBinMax, Comment,    
+             cp_en                                             ,cg_ctrl_obj.cg_ctrl_cp_en,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_loopback                                       ,cg_ctrl_obj.cg_ctrl_cp_loopback,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+             cp_manual                                         ,cg_ctrl_obj.cg_ctrl_cp_manual,2           ,0           ,2           ,100         ,100         ,1           ,1           ,64          ,            ,
+
+
+      Instance obj.cg_ctrl Cross Cover Point Details 
+
+             Name,                                             TableTag,     Expected,   Uncovered,  Covered,    Percent,    Goal,       Weight,     AtLeast,    Comment,    
+             x_mode                                            ,cg_ctrl_obj.cg_ctrl_x_mode,8           ,0           ,8           ,100         ,100         ,1           ,1           ,            ,
+
+
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CoverPoint Tables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+ Cover Point Table for Inst : obj.cg_xfer, Variable :, cp_mode
+ Table tag :, cg_xfer_obj.cg_xfer_cp_mode
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      mode0       ,118         ,1           ,
+      mode1       ,64          ,1           ,
+      mode2       ,107         ,1           ,
+      mode3       ,82          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_xfer, Variable :, cp_order
+ Table tag :, cg_xfer_obj.cg_xfer_cp_order
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      msb         ,123         ,1           ,
+      lsb         ,248         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_xfer, Variable :, cp_cs
+ Table tag :, cg_xfer_obj.cg_xfer_cp_cs
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   4           ,0           ,4           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      cs_0        ,76          ,1           ,
+      cs_1        ,108         ,1           ,
+      cs_2        ,108         ,1           ,
+      cs_3        ,79          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_xfer, Variable :, cp_b2b
+ Table tag :, cg_xfer_obj.cg_xfer_cp_b2b
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      single      ,65          ,1           ,
+      back2back   ,306         ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : obj.cg_xfer, Variable :, x_mode_order
+ Table tag :, cg_xfer_obj.cg_xfer_x_mode_order
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          8           ,0           ,8           ,100         ,
+ Automatic,      8           ,0           ,8           ,1           ,
+
+                 Auto Covered bins 
+
+      cp_mode         ,cp_order        ,Hit Count,  AtLeast,    
+      mode0           ,msb             ,39          ,1           ,
+      mode0           ,lsb             ,79          ,1           ,
+      mode1           ,msb             ,37          ,1           ,
+      mode1           ,lsb             ,27          ,1           ,
+      mode2           ,msb             ,34          ,1           ,
+      mode2           ,lsb             ,73          ,1           ,
+      mode3           ,msb             ,13          ,1           ,
+      mode3           ,lsb             ,69          ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : obj.cg_xfer, Variable :, x_mode_order
+ Table tag :, cg_xfer_obj.cg_xfer_x_mode_order
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          8           ,0           ,8           ,100         ,
+ Automatic,      8           ,0           ,8           ,1           ,
+
+                 Auto Covered bins 
+
+      cp_mode         ,cp_order        ,Hit Count,  AtLeast,    
+      mode0           ,msb             ,39          ,1           ,
+      mode0           ,lsb             ,79          ,1           ,
+      mode1           ,msb             ,37          ,1           ,
+      mode1           ,lsb             ,27          ,1           ,
+      mode2           ,msb             ,34          ,1           ,
+      mode2           ,lsb             ,73          ,1           ,
+      mode3           ,msb             ,13          ,1           ,
+      mode3           ,lsb             ,69          ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : obj.cg_xfer, Variable :, x_mode_order
+ Table tag :, cg_xfer_obj.cg_xfer_x_mode_order
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          8           ,0           ,8           ,100         ,
+ Automatic,      8           ,0           ,8           ,1           ,
+
+                 Auto Covered bins 
+
+      cp_mode         ,cp_order        ,Hit Count,  AtLeast,    
+      mode0           ,msb             ,39          ,1           ,
+      mode0           ,lsb             ,79          ,1           ,
+      mode1           ,msb             ,37          ,1           ,
+      mode1           ,lsb             ,27          ,1           ,
+      mode2           ,msb             ,34          ,1           ,
+      mode2           ,lsb             ,73          ,1           ,
+      mode3           ,msb             ,13          ,1           ,
+      mode3           ,lsb             ,69          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_data, Variable :, cp_mosi
+ Table tag :, cg_data_obj.cg_data_cp_mosi
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   5           ,0           ,5           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      zero        ,32          ,1           ,
+      ones        ,27          ,1           ,
+      alt         ,74          ,1           ,
+      low         ,149         ,1           ,
+      high        ,163         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_data, Variable :, cp_miso
+ Table tag :, cg_data_obj.cg_data_cp_miso
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   5           ,0           ,5           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      zero        ,22          ,1           ,
+      ones        ,24          ,1           ,
+      alt         ,49          ,1           ,
+      low         ,164         ,1           ,
+      high        ,161         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_div, Variable :, cp_div
+ Table tag :, cg_div_obj.cg_div_cp_div
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   6           ,0           ,6           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      d0          ,60          ,1           ,
+      d1          ,55          ,1           ,
+      d2_3        ,165         ,1           ,
+      d4_7        ,84          ,1           ,
+      big         ,6           ,1           ,
+      max         ,1           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_apb, Variable :, cp_addr
+ Table tag :, cg_apb_obj.cg_apb_cp_addr
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   9           ,0           ,9           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      txdata      ,466         ,1           ,
+      rxdata      ,458         ,1           ,
+      ctrl        ,102         ,1           ,
+      clkdiv      ,93          ,1           ,
+      status      ,11507       ,1           ,
+      ier         ,18          ,1           ,
+      isr         ,28          ,1           ,
+      csreg       ,123         ,1           ,
+      unmap       ,16          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_apb, Variable :, cp_rw
+ Table tag :, cg_apb_obj.cg_apb_cp_rw
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      rd          ,12013       ,1           ,
+      wr          ,798         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_apb, Variable :, cp_err
+ Table tag :, cg_apb_obj.cg_apb_cp_err
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      ok          ,12795       ,1           ,
+      slverr      ,16          ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : obj.cg_apb, Variable :, x_access
+ Table tag :, cg_apb_obj.cg_apb_x_access
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          18          ,1           ,17          ,94.4444     ,
+ Automatic,      18          ,1           ,17          ,0.944444    ,
+
+                 Auto Uncovered bins 
+
+      cp_addr         ,cp_rw           ,Hit Count,  AtLeast,    
+      rxdata          ,wr              ,0           ,1           ,
+
+                 Auto Covered bins 
+
+      cp_addr         ,cp_rw           ,Hit Count,  AtLeast,    
+      txdata          ,rd              ,1           ,1           ,
+      txdata          ,wr              ,465         ,1           ,
+      rxdata          ,rd              ,458         ,1           ,
+      ctrl            ,rd              ,6           ,1           ,
+      ctrl            ,wr              ,96          ,1           ,
+      clkdiv          ,rd              ,5           ,1           ,
+      clkdiv          ,wr              ,88          ,1           ,
+      status          ,rd              ,11506       ,1           ,
+      status          ,wr              ,1           ,1           ,
+      ier             ,rd              ,5           ,1           ,
+      ier             ,wr              ,13          ,1           ,
+      isr             ,rd              ,19          ,1           ,
+      isr             ,wr              ,9           ,1           ,
+      csreg           ,rd              ,5           ,1           ,
+      csreg           ,wr              ,118         ,1           ,
+      unmap           ,rd              ,8           ,1           ,
+      unmap           ,wr              ,8           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_isr, Variable :, cp_rx_avail
+ Table tag :, cg_isr_obj.cg_isr_cp_rx_avail
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      clr         ,16          ,1           ,
+      set         ,3           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_isr, Variable :, cp_tx_empty
+ Table tag :, cg_isr_obj.cg_isr_cp_tx_empty
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      clr         ,3           ,1           ,
+      set         ,16          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_isr, Variable :, cp_done
+ Table tag :, cg_isr_obj.cg_isr_cp_done
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      clr         ,14          ,1           ,
+      set         ,5           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_isr, Variable :, cp_overrun
+ Table tag :, cg_isr_obj.cg_isr_cp_overrun
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      clr         ,17          ,1           ,
+      set         ,2           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_isr, Variable :, cp_overflow
+ Table tag :, cg_isr_obj.cg_isr_cp_overflow
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      clr         ,17          ,1           ,
+      set         ,2           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_isr, Variable :, cp_ier
+ Table tag :, cg_isr_obj.cg_isr_cp_ier
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   7           ,0           ,7           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      none        ,7           ,1           ,
+      rx          ,3           ,1           ,
+      tx          ,1           ,1           ,
+      done        ,3           ,1           ,
+      ovr         ,2           ,1           ,
+      ovf         ,2           ,1           ,
+      all         ,1           ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_status, Variable :, cp_tx_lvl
+ Table tag :, cg_status_obj.cg_status_cp_tx_lvl
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      empty       ,3974        ,1           ,
+      partial     ,6927        ,1           ,
+      full        ,605         ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_status, Variable :, cp_rx_lvl
+ Table tag :, cg_status_obj.cg_status_cp_rx_lvl
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ UserDefined,   3           ,0           ,3           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      empty       ,10649       ,1           ,
+      partial     ,778         ,1           ,
+      full        ,79          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_status, Variable :, cp_busy
+ Table tag :, cg_status_obj.cg_status_cp_busy
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Automatic,     2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[0]     ,294         ,1           ,
+      auto[1]     ,11212       ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_ctrl, Variable :, cp_en
+ Table tag :, cg_ctrl_obj.cg_ctrl_cp_en
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Automatic,     2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[0]     ,11          ,1           ,
+      auto[1]     ,85          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_ctrl, Variable :, cp_loopback
+ Table tag :, cg_ctrl_obj.cg_ctrl_cp_loopback
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Automatic,     2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[0]     ,75          ,1           ,
+      auto[1]     ,21          ,1           ,
+
+
+
+
+
+
+ Cover Point Table for Inst : obj.cg_ctrl, Variable :, cp_manual
+ Table tag :, cg_ctrl_obj.cg_ctrl_cp_manual
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Automatic,     2           ,0           ,2           ,100         ,
+
+                     Covered bins 
+
+      Name,       Hit Count,  AtLeast,    
+      auto[0]     ,75          ,1           ,
+      auto[1]     ,21          ,1           ,
+
+
+
+
+
+
+ Cross Cover Point Table for Inst : obj.cg_ctrl, Variable :, x_mode
+ Table tag :, cg_ctrl_obj.cg_ctrl_x_mode
+
+                      Summary 
+
+ Category,       Expected,   Uncovered,  Covered,    Percent,    
+ Total,          8           ,0           ,8           ,100         ,
+ Automatic,      8           ,0           ,8           ,1           ,
+
+                 Auto Covered bins 
+
+      cp_en           ,cp_loopback     ,cp_manual       ,Hit Count,  AtLeast,    
+      auto[0]         ,auto[0]         ,auto[0]         ,5           ,1           ,
+      auto[0]         ,auto[0]         ,auto[1]         ,2           ,1           ,
+      auto[0]         ,auto[1]         ,auto[0]         ,2           ,1           ,
+      auto[0]         ,auto[1]         ,auto[1]         ,2           ,1           ,
+      auto[1]         ,auto[0]         ,auto[0]         ,52          ,1           ,
+      auto[1]         ,auto[0]         ,auto[1]         ,16          ,1           ,
+      auto[1]         ,auto[1]         ,auto[0]         ,16          ,1           ,
+      auto[1]         ,auto[1]         ,auto[1]         ,1           ,1           ,
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+TEST                     SEED   RESULT UVM_ERR  SVA_FAIL
+spi_smoke_test           1      PASS   0        0
+spi_reg_test             1      PASS   0        0
+spi_mode_test            1      PASS   0        0
+spi_clkdiv_test          1      PASS   0        0
+spi_cs_test              1      PASS   0        0
+spi_overflow_test        1      PASS   0        0
+spi_overrun_test         1      PASS   0        0
+spi_loopback_test        1      PASS   0        0
+spi_irq_test             1      PASS   0        0
+spi_random_test          1      PASS   0        0
+PASSED 10 / 10
+TOGGLE_COV: 109 / 109 bits toggled 0->1 and 1->0 (100.00%, cumulative)
