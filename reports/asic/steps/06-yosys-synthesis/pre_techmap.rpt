@@ -1,0 +1,41 @@
+133. Printing statistics.
+
+=== spi_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      702 wires
+      976 wire bits
+       63 public wires
+      308 public wire bits
+       15 ports
+       85 port bits
+      893 cells
+      272   $_ANDNOT_
+       23   $_AND_
+      204   $_DFFE_PN0P_
+        1   $_DFFE_PN1P_
+       14   $_DFF_PN0_
+       57   $_MUX_
+       32   $_NAND_
+       11   $_NOR_
+       20   $_NOT_
+       53   $_ORNOT_
+      169   $_OR_
+        8   $_XNOR_
+       29   $_XOR_
+
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_DFFE_PN0P_ is unknown!
+   Area for cell type $_DFFE_PN1P_ is unknown!
+   Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+

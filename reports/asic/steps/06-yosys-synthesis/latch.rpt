@@ -1,0 +1,4 @@
+
+18. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$0d99ae0ca8c422f9296a0d892dcb02b9a145449b\spi_fifo.$mem2reg_rd$\mem$/home/runner/work/spi-rtl-to-gds-flow/spi-rtl-to-gds-flow/rtl/spi_fifo.v:32$35_DATA' from process `$paramod$0d99ae0ca8c422f9296a0d892dcb02b9a145449b\spi_fifo.$proc$/home/runner/work/spi-rtl-to-gds-flow/spi-rtl-to-gds-flow/rtl/spi_fifo.v:32$63'.
+No latch inferred for signal `\spi_regs.\prdata' from process `\spi_regs.$proc$/home/runner/work/spi-rtl-to-gds-flow/spi-rtl-to-gds-flow/rtl/spi_regs.v:114$92'.

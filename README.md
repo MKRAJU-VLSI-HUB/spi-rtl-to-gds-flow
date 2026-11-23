@@ -1,5 +1,7 @@
 # SPI RTL to GDS Flow
 
+<p align="center"><img src="docs/images/spi_top_layout.png" width="520" alt="spi_top layout"></p>
+
 An APB3 SPI master controller taken through a full ASIC design flow: RTL design, UVM verification with SystemVerilog assertions and code and functional coverage, and RTL-to-GDSII physical design on the SkyWater **SKY130** 130 nm open PDK with OpenLane 2 (LibreLane).
 
 ---
@@ -13,7 +15,10 @@ An APB3 SPI master controller taken through a full ASIC design flow: RTL design,
 | Code coverage (DUT) | statement **100 %**, branch **95–100 %**, condition **93–100 %** |
 | Toggle coverage (ports + key registers) | **109 / 109 bits (100 %)** |
 | Assertions | 35+ SVA properties + 9 cover properties |
-| Technology | SKY130A, `sky130_fd_sc_hd`, 50 MHz |
+| Technology | SKY130A, `sky130_fd_sc_hd` |
+| Signoff | **50 MHz**, timing met in **all 9 PVT/RC corners** (setup WNS +2.57 ns, hold WNS +0.11 ns) |
+| Area / power | 0.034 mm² die, 793 cells (219 flip-flops), 1.68 mW |
+| Physical verification | DRC **0**, LVS **clean**, antenna **0** |
 
 ---
 
@@ -132,7 +137,46 @@ cd sim
 
 Flow: Yosys synthesis → floorplan and PDN → placement → CTS → routing → RC extraction → multi-corner STA → Magic and KLayout DRC → Netgen LVS → antenna check → GDSII, run by `.github/workflows/rtl2gds.yml`.
 
-Results are in the section below.
+| Metric | Value |
+|--------|------:|
+| Clock | 50 MHz (20 ns), 30 % I/O budgets |
+| Setup WNS / TNS (worst of 9 corners) | **+2.57 ns** / 0 |
+| Hold WNS (worst of 9 corners) | **+0.11 ns** |
+| Setup WNS ss_100C_1v60 / tt_025C_1v80 / ff_n40C_1v95 | +2.65 / +5.13 / +6.24 ns |
+| Clock skew (worst) | 0.27 ns |
+| Die size | 179.7 × 190.4 µm (0.034 mm²) |
+| Std-cell area / utilization | 16,929 µm² / 60.6 % |
+| Synthesized cells / flip-flops | 793 / 219 |
+| Total power (tt) | 1.68 mW (internal 1.07, switching 0.61) |
+| Routed wirelength | 33,037 µm |
+| I/O pins | 87 |
+| Magic DRC / KLayout DRC / route DRC | 0 / 0 / 0 |
+| LVS | clean |
+| Antenna violations | 0 |
+
+Timing is met in every PVT/RC corner. Max-slew and max-capacitance warnings are reported by OpenSTA on a few nets in some corners, mostly slow-slow; they are listed in `reports/asic/warning.log`.
+
+<p align="center">
+  <img src="docs/images/spi_top_layout.png" width="520" alt="spi_top final layout (SKY130)">
+  <img src="docs/images/spi_top_layout_zoom.png" width="320" alt="zoomed layout">
+</p>
+
+To run the flow locally with Docker:
+
+```bash
+pip install librelane
+librelane --dockerized openlane/config.json
+```
+
+## Tools
+
+| Stage | Tool |
+|-------|------|
+| RTL simulation, UVM 1.2, SVA, coverage | AMD Vivado 2024.2 XSIM / XCRG |
+| Synthesis | Yosys |
+| Floorplan, placement, CTS, routing, STA | OpenROAD / OpenSTA (OpenLane 2 / LibreLane) |
+| DRC / LVS / GDS | Magic, KLayout, Netgen |
+| PDK | SkyWater SKY130A |
 
 ---
 
